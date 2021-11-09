@@ -1,10 +1,10 @@
 import { React } from 'react';
 import './App.scss';
-import SceneCanvas from './components/sceneCanvas';
+import ModelCanvas from './components/modelCanvas';
 
 const App = () =>
 	<div className="App" role="App">
-		{ SceneCanvas() }
+		{ ModelCanvas() }
 	</div>;
 
 export default App;
