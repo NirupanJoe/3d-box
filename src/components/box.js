@@ -17,7 +17,7 @@ const Box = (props) => {
 			onPointerOver={ () => patchState({ hover: true }) }
 			onPointerOut={ () => patchState({ hover: false }) }
 		>
-			<boxGeometry args={ [1, 1, 1] }/>
+			<sphereBufferGeometry args={ [1, 60, 60] }/>
 			<meshStandardMaterial color={ state.hover ? 'red' : 'orange' }/>
 		</mesh>
 	);
