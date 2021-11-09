@@ -7,8 +7,7 @@ const Canvas = (context) =>
 	<CanvasComponent>
 		<ambientLight/>
 		<pointLight position={ [10, 10, 10] }/>
-		<Box context={ context } position={ [-1.2, 0, 0] }/>
-		<Box context={ context } position={ [1.2, 0, 0] }/>
+		<Box context={ context } position={ [0, 0, 0] }/>
 	</CanvasComponent>;
 
 export default Canvas;
