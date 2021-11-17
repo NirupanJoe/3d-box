@@ -1,10 +1,10 @@
 import { React } from 'react';
 import './App.scss';
-import CharacterCanvas from './components/characterCanvas';
+import TextDemoCanvas from './components/textDemoCanvas';
 
 const App = () =>
 	<div className="App" role="App">
-		{ CharacterCanvas() }
+		{ TextDemoCanvas() }
 	</div>;
 
 export default App;
