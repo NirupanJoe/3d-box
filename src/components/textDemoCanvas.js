@@ -3,7 +3,7 @@ import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import TextDemo from './textDemo';
 
-const Jumbo = () => {
+const Jumbo = ({ text }) => {
 	const ref = useRef();
 
 	// eslint-disable-next-line no-return-assign
@@ -15,19 +15,19 @@ const Jumbo = () => {
 	return (
 		<group ref={ ref }>
 			<TextDemo
-				text="வணக்கம்"
+				text={ text }
 				position={ [-12, 6.5, 0] }
 			/>
 		</group>
 	);
 };
 
-const TextDemoCanvas = () =>
+const TextDemoCanvas = ({ state }) =>
 	<Canvas camera={ { position: [0, 0, 35] } }>
 		<ambientLight intensity={ 2 }/>
 		<pointLight position={ [40, 40, 40] }/>
 		<Suspense fallback={ null }>
-			<Jumbo/>
+			<Jumbo text={ state.text }/>
 		</Suspense>
 	</Canvas>;
 

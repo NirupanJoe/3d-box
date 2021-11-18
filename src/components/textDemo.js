@@ -7,7 +7,7 @@ import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
 extend({ TextGeometry });
 
 const TextDemo = ({ text, size = 1.5 }) => {
-	const font = useLoader(FontLoader, `${ process.env.PUBLIC_URL }/roboto-tamil.json`);
+	const font = useLoader(FontLoader, `${ process.env.PUBLIC_URL }/roboto-Medium.json`);
 	// eslint-disable-next-line object-shorthand
 	const config = useMemo(() => ({
 		font,
