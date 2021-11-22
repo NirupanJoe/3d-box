@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 
 // eslint-disable-next-line max-lines-per-function
-const Box = (props) => {
+const Sphere = (props) => {
 	const {
 		position,
 		context: { patchState, state },
@@ -24,10 +24,10 @@ const Box = (props) => {
 			onPointerOver={ () => patchState({ hover: true }) }
 			onPointerOut={ () => patchState({ hover: false }) }
 		>
-			<boxGeometry args={ [1, 1, 1] }/>
+			<sphereBufferGeometry args={ [1, 1, 1] }/>
 			<meshStandardMaterial color={ state.hover ? 'red' : 'orange' }/>
 		</mesh>
 	);
 };
 
-export default Box;
+export default Sphere;

@@ -24,6 +24,8 @@ const CharacterDemo = (props) => {
 			<group rotation={ [Math.PI / 2, 0, 0] } scale={ 0.01 }>
 				<primitive object={ nodes.mixamorigHips }/>
 				<skinnedMesh
+					castShadow={ true }
+					receiveShadow={ true }
 					onPointerOver={ () => setHovered(true) }
 					onPointerOut={ () => setHovered(false) }
 					onClick={ () => setIndex((index + 1) % names.length) }
@@ -40,6 +42,7 @@ const CharacterDemo = (props) => {
 				</skinnedMesh>
 			</group>
 			<a.mesh
+				receiveShadow={ true }
 				position={ [0, 1, -1] }
 				scale={ scale }
 			>
