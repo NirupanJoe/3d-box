@@ -11,17 +11,17 @@ const ShadowDemo = ({ context }) => {
 	useFrame(() => (ref.current.rotation.y += 0.01));
 
 	return (
-		<group ref={ ref } position={ [0, -1.5, -2.5] }>
+		<group ref={ ref } position={ [0, 0, 0] }>
 			<Plane
 				color="hotPink"
 				rotation-x={ Math.PI / 2 }
-				position-z={ 3 }
-				scale={ [8, 4, 0.1] }
+				scale={ [5.5, 5, 0.1] }
+				position={ [0, -0.5, 0] }
 			/>
-			<Box context={ context } position={ [-1, 0.6, 3] } xRotation={ 0 }/>
+			<Box context={ context } position={ [-0.6, 0, 0] } xRotation={ 0 }/>
 			<Sphere
 				context={ context }
-				position={ [0.3, 0.6, 3.5] }
+				position={ [0.6, 0.1, 0] }
 				xRotation={ 0 }
 			/>
 		</group>);
