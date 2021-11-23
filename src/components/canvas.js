@@ -1,13 +1,16 @@
 /* eslint-disable no-magic-numbers */
 import { React } from 'react';
 import { Canvas as CanvasComponent } from '@react-three/fiber';
-import Box from './box';
+import ShadowDemo from './shadow/shadowDemo';
 
 const Canvas = (context) =>
-	<CanvasComponent>
+	<CanvasComponent shadows={ true }>
 		<ambientLight/>
-		<pointLight position={ [10, 10, 10] }/>
-		<Box context={ context } position={ [0, 0, 0] }/>
+		<directionalLight
+			position={ [-10, 8, -5] }
+			castShadow={ true }
+		/>
+		<ShadowDemo context={ context }/>
 	</CanvasComponent>;
 
 export default Canvas;
