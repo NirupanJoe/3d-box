@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './App.scss';
-import Canvas from './components/canvas';
+import CharacterDemoCanvas from './components/characterDemoCanvas';
 
 const App = (context) => {
 	const { patchState, state } = context;
@@ -12,7 +12,7 @@ const App = (context) => {
 			role="App"
 			onKeyUp={ (evt) => patchState({ text: state.text + evt.key }) }
 		>
-			{ Canvas(context) }
+			{ CharacterDemoCanvas(context) }
 		</div>);
 };
 
