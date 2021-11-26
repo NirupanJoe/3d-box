@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './App.scss';
-import CharacterDemoCanvas from './components/characterDemoCanvas';
+import FlightCanvas from './components/flight/flightCanvas';
 
 const App = (context) => {
 	const { patchState, state } = context;
@@ -12,7 +12,7 @@ const App = (context) => {
 			role="App"
 			onKeyUp={ (evt) => patchState({ text: state.text + evt.key }) }
 		>
-			{ CharacterDemoCanvas(context) }
+			{ FlightCanvas(context) }
 		</div>);
 };
 
