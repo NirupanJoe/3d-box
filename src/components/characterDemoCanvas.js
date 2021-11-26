@@ -3,6 +3,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import CharacterDemo from './characterDemo';
 import Plane from './shadow/plane';
+import { Box } from '@react-three/drei';
 
 // eslint-disable-next-line max-lines-per-function
 const CharacterDemoCanvas = () =>
@@ -26,6 +27,14 @@ const CharacterDemoCanvas = () =>
 					position={ [0, -0.5, 0] }
 				/>
 				<CharacterDemo/>
+				<Box
+					castShadow={ true }
+					receiveShadow={ true }
+					scale={ 0.2 }
+					position={ [0.5, -0.1, 0.3] }
+				>
+					<meshStandardMaterial attach="material" color="red"/>
+				</Box>
 			</Suspense>
 		</group>
 		<mesh
