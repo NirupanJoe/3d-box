@@ -2,7 +2,7 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import CharacterDemo from './characterDemo';
-import Plane from './shadow/plane';
+import Plane from '../shadow/plane';
 import { Box } from '@react-three/drei';
 
 // eslint-disable-next-line max-lines-per-function
