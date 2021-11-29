@@ -6,7 +6,7 @@ import { useFrame, useThree } from '@react-three/fiber';
 const Flight = () => {
 	const { viewport } = useThree();
 	const ref = useRef();
-	const { scene } = useGLTF(`${ process.env.PUBLIC_URL }/flight.gltf`);
+	const { scene } = useGLTF(`${ process.env.PUBLIC_URL }/paperPlane.glb`);
 
 	useFrame(({ mouse }) => {
 		const x = (mouse.x * viewport.width) / 2;
@@ -20,7 +20,7 @@ const Flight = () => {
 		<group
 			ref={ ref }
 			dispose={ null }
-			rotation={ [2, -1.56, 0.5] }
+			rotation={ [0, 0, 0] }
 			scale={ 0.1 }
 		>
 			<primitive object={ scene }/>
