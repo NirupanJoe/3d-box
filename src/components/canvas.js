@@ -1,7 +1,7 @@
 /* eslint-disable no-magic-numbers */
 import { React } from 'react';
 import { Canvas as CanvasComponent } from '@react-three/fiber';
-import ShadowDemo from './shadow/shadowDemo';
+import Box from './box';
 
 const Canvas = (context) =>
 	<CanvasComponent shadows={ true }>
@@ -10,7 +10,7 @@ const Canvas = (context) =>
 			position={ [-10, 8, -5] }
 			castShadow={ true }
 		/>
-		<ShadowDemo context={ context }/>
+		<Box context={ context }/>
 	</CanvasComponent>;
 
 export default Canvas;
