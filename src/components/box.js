@@ -16,6 +16,7 @@ const Box = (props) => {
 			tension: 170,
 			friction: 12,
 			precision: 0.01,
+			duration: 1000,
 			easing: (t) => t,
 		},
 	});
