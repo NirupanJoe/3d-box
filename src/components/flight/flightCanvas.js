@@ -1,11 +1,13 @@
+/* eslint-disable no-magic-numbers */
 import { Canvas } from '@react-three/fiber';
 import { React } from 'react';
 import Flight from './flight';
 
 const FlightCanvas = () =>
 	<Canvas>
-		<ambientLight intensity={ 0.6 }/>
-		<directionalLight intensity={ 0.5 }/>
+		<color attach="background" args={ ['lightblue'] }/>
+		<ambientLight color="black" intensity={ 0.3 }/>
+		<directionalLight position={ [-1, 2, 10] } intensity={ 2 }/>
 		<Flight/>
 	</Canvas>;
 
