@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './App.scss';
-import flightCanvas from './components/flight/flightCanvas';
+import CloudCanvas from './components/cloud/cloudCanvas';
 
 const App = (context) => {
 	const { patchState, state } = context;
@@ -12,7 +12,7 @@ const App = (context) => {
 			role="App"
 			onKeyUp={ (evt) => patchState({ text: state.text + evt.key }) }
 		>
-			{ flightCanvas(context) }
+			{ CloudCanvas(context) }
 		</div>);
 };
 
