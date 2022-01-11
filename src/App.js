@@ -1,6 +1,6 @@
 import { React } from 'react';
 import './App.scss';
-import CloudCanvas from './components/cloud/cloudCanvas';
+import CloudCanvas from './components/terrain/terrainCanvas';
 
 const App = (context) => {
 	const { patchState, state } = context;
