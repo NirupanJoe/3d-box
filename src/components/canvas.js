@@ -1,16 +1,10 @@
-/* eslint-disable no-magic-numbers */
 import { React } from 'react';
 import { Canvas as CanvasComponent } from '@react-three/fiber';
-import Box from './box';
+import Audio from './audio';
 
-const Canvas = (context) =>
+const Canvas = () =>
 	<CanvasComponent shadows={ true }>
-		<ambientLight/>
-		<directionalLight
-			position={ [-10, 8, -5] }
-			castShadow={ true }
-		/>
-		<Box context={ context }/>
+		<Audio/>
 	</CanvasComponent>;
 
 export default Canvas;
