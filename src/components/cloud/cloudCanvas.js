@@ -9,12 +9,12 @@ const CloudCanvas = () =>
 		<pointLight intensity={ 2 } position={ [0, 0, -1000] }/>
 		<Suspense fallback={ null }>
 			<Cloud
-				position={ [0, 0, 0] }
+				rotation={ [Math.PI / 2, 0, 0] }
 				speed={ 0.1 }
 				opacity={ 0.5 }
 				segments={ 10 }
 				depth={ 2 }
-				scale={ 0.5 }
+				scale={ 1 }
 			/>
 		</Suspense>
 	</Canvas>;
